@@ -32,7 +32,14 @@ console.log(array.join("==>")); // [-10, 0, 10, 50, 51, 52, 60]
 
 console.log('--------------- APARTADO 2 -----------------');
 
+function ejercicio2(nombre, ...trabajos) {
+    console.log("Nombre: " + nombre);
+    for(let trabajo of trabajos) {
+        console.log("\t" + trabajo);
+    }
+}
 
+ejercicio2("Pepe", "Albañil", "Programador", "Buscador de tesoros");
 
 /**
  * Apartado 3
@@ -54,16 +61,21 @@ let mensajes = [
     ['Silla', 'Se ha borrado el producto de la base de datos']
 ];
 
-let msgError = mensajes.filter(([producto, msg]) => msg.startsWith('ERROR'));
+let msgMap = new Map();
 
-msgError.forEach(([producto, msg]) => {
-    // El producto no está en el Map
-    // Inserto la clave producto con un array que contiene el mensaje como valor
-    // El producto está en el Map
-    // Obtengo su valor (array de mensajes) e inserto el nuevo mensaje en ese array
+mensajes
+    .filter(([producto, msg]) => msg.startsWith('ERROR'))
+    .forEach(([producto, msg]) => {
+        if(!msgMap.has(producto)) {
+            msgMap.set(producto, [msg]);
+        } else {
+            msgMap.get(producto).push(msg);
+        }
+    });
+
+msgMap.forEach((mensajes, producto) => {
+    console.log(`${producto} -> ${mensajes}`);
 });
-
-// Recorrermos Map y mostramos valores
 
 /**
  * Apartado 4
@@ -75,6 +87,14 @@ msgError.forEach(([producto, msg]) => {
  */
 
 console.log('--------------- APARTADO 4 -----------------');
+
+function ejercicio4(lado1, lado2, angulo) {
+    let radianes = angulo * Math.PI / 180;
+    let area = 0.5 * lado1 * lado2 * Math.sin(radianes);
+    console.log(`Área triángulo: ${area}`);
+}
+
+ejercicio4(4, 6, 45);
 
 /**
  * Apartado 5
@@ -88,3 +108,14 @@ console.log('--------------- APARTADO 4 -----------------');
  */
 
 console.log('--------------- APARTADO 5 -----------------');
+
+let dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", 
+             "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+function ejercicio5(fechaStr) {
+    let fecha = new Date(fechaStr);
+    console.log(`${dias[fecha.getDay()]}, ${fecha.getDate()} de ${meses[fecha.getMonth()]} de ${fecha.getFullYear()}`);
+}
+
+ejercicio5("2018-06-14");
