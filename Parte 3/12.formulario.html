@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formulario">
+        <p>
+            <label for="nombre">Nombre:</label> 
+            <input type="text" id="nombre" name="nombre">
+        </p>
+        <p>
+            <label for="edad">Edad:</label> 
+            <input type="number" id="edad" name="edad">
+        </p>
+        <p>Aficiones:
+            <input type="checkbox" id="deporte" name="aficiones" value="deporte">
+            <label for="deporte">Deporte</label>
+            <input type="checkbox" id="viajar" name="aficiones" value="viajar">
+            <label for="viajar">Viajar</label>
+            <input type="checkbox" id="comer" name="aficiones" value="comer">
+            <label for="comer">Comer</label>
+        </p>
+        <p>
+            Color favorito:
+            <input type="radio" id="rojo" name="color" value="rojo" checked>
+            <label for="rojo">Rojo</label>
+            <input type="radio" id="verde" name="color" value="verde">
+            <label for="verde">Verde</label>
+            <input type="radio" id="azul" name="color" value="azul">
+            <label for="azul">Azul</label>
+        </p>
+        <p>
+            <label for="avatar">Avatar: </label>
+            <input type="file" id="avatar" name="avatar">
+        </p>
+        <p><img id="imgPreview"></p>
+        <p><button type="submit">Enviar</button></p>
+    </form>
+    <script src="12.formulario.js"></script>
+</body>
+</html>

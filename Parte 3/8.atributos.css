@@ -1,0 +1,17 @@
+.subrayado {
+    text-decoration: underline;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+button {
+    background-color: white;
+    border-color: black;
+}
+
+button.activado {
+    background-color: black;
+    color: white;
+}
