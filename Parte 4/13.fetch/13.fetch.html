@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="13.fetch.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="insertarProd">
+        <p>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre"></p>
+        <p>
+            <label for="desc">Descripción: </label>
+            <input type="text" name="desc" id="desc">
+        </p>
+        <p>
+            <label for="photo">Imagen: </label>
+            <input type="file" id="photo" name="photo">
+        </p>
+        <p>
+            <img id="imgPreview" alt="">
+        </p>
+        <p>
+            <button type="submit">
+                Insertar producto
+            </button>
+        </p>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="productos">
+
+        </tbody>
+    </table>
+    <script src="13.fetch.js"></script>
+</body>
+</html>
