@@ -1,0 +1,28 @@
+{
+  "name": "ejercicio6",
+  "version": "1.0.0",
+  "description": "Curso Cefire JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:prod": "webpack -p",
+    "build:watch": "webpack --watch",
+    "start": "webpack-dev-server"
+  },
+  "author": "Arturo Bernal",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.2",
+    "handlebars": "^4.7.6",
+    "handlebars-loader": "^1.7.1",
+    "lite-server": "^2.4.0",
+    "ts-loader": "^7.0.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

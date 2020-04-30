@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <title>Register | Events manager</title>
+  <meta charset="UTF-8">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Events manager</a>
+  </nav>
+
+  <div class="container">
+    <form action="#" id="form-register" class="mt-4" method="POST" role="form">
+      <legend>Create an account</legend>
+
+      <div class="form-group">
+        <label for="nombre">Name:</label>
+        <input type="text" class="form-control" id="name" name="nameUser" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label for="correo">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="correo">Repeat Email:</label>
+        <input type="email" class="form-control" id="email2" name="email2" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="image">Avatar image</label>
+        <input type="file" class="form-control" id="avatar" name="avatar">
+      </div>
+      <div>
+        <img src="" alt="" id="imgPreview" class="img-thumbnail">
+      </div>
+      <a class="btn btn-secondary" href="login.html" role="button">Cancelar</a>
+      <button type="submit" class="btn btn-primary">Registrarse</button>
+    </form>
+
+    <script src="dist/vendors.bundle.js"></script>
+    <script src="dist/commons.bundle.js"></script>
+    <script src="dist/register.bundle.js"></script>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<img class="card-img-top" src="{{image}}">
+<div class="card-body">
+    <h4 class="card-title">{{title}}</h4>
+    <p class="card-text">{{description}}</p>
+    <div class="row mr-4 align-items-center">
+        <img src="{{creator.avatar}}" class="rounded-circle col" style="width: 50px;">
+        <div class="col">
+            <small>{{creator.name}}</small>
+        </div>
+        <button class="btn btn-danger col">Delete</button>
+    </div>
+</div>
+<div class="card-footer">
+    <small class="text-muted">
+        {{date}}
+        <span class="float-right">{{price}}€</span>
+    </small>
+</div>
