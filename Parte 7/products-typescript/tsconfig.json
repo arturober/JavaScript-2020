@@ -1,9 +1,0 @@
-{
-    "compilerOptions": {
-        "target": "es2015", // Compile into ES2015
-        "moduleResolution": "node", // NodeJS require format for importing/exporting modules
-        "sourceMap": true, // Useful for debugging
-        "removeComments": false, // For debugging (in production mode they’ll be removed anyway)
-        "alwaysStrict": true // JavaScript code will have the “use strict” instruction (strict mode).
-    }
-}

@@ -15,13 +15,14 @@ function createMarker(color, lngLat) {
         .addTo(map);
 }
 
-const token = "YOUR TOKEN GOES HERE!";
+const token = "pk.eyJ1IjoiYXJ0dXJvYmVyIiwiYSI6ImNrMXFlc29vazExaDUzbms2cWdpb3l6cGwifQ.hyoOv4iVc6XqWPYBKa4NkQ";
 mapboxgl.accessToken = token; // VERY IMPORTANT
 let divMap = null;
 let map = null;
 
 document.addEventListener("DOMContentLoaded", async e => {
     let pos = await getPosition();
+    console.log(pos);
     
     let img = "https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/" +
         "pin-s+f00(" + pos.coords.longitude + "," + pos.coords.latitude + ")/" +

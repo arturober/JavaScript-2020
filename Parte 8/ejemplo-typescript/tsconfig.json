@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "es2015", // Compilamos a ES2015
+        "moduleResolution": "node", // Los import/export se traducen a formato NodeJS (require)
+        "sourceMap": true, // Producir sourcemaps para depurar archivos TypeScript
+        "removeComments": false, // Mantener comentarios (para depuración, el producción se eliminan)
+        "alwaysStrict": true // Genera la instrucción “use strict” en los archivos JS producidos.
+    }
+}
