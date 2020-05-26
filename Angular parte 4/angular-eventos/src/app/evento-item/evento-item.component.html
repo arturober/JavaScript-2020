@@ -1,10 +1,10 @@
 <img class="card-img-top" [src]="evento.image">
 <div class="card-body">
-  <h4 class="card-title">{{evento.title}}</h4>
+  <h4 class="card-title">{{evento.name}}</h4>
   <p class="card-text">
     {{evento.description}}
-    <button class="btn btn-danger ml-3 float-right" (click)="deleteEvento()">Delete</button>
   </p>
+  <div><button class="btn btn-danger" (click)="deleteEvento()">Delete</button></div>
 </div>
 <div class="card-footer text-muted">
   {{evento.date}}

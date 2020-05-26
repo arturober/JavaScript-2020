@@ -1,5 +1,6 @@
 export interface Evento {
-  title: string;
+  id?: number;
+  name: string;
   image: string;
   date: string;
   description: string;

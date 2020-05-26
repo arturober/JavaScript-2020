@@ -12,7 +12,7 @@ export class EventosFilterPipe implements PipeTransform {
     }
 
     return eventos.filter(e =>
-      e.title.toLowerCase().includes(search.toLowerCase()) ||
+      e.name.toLowerCase().includes(search.toLowerCase()) ||
       e.description.toLowerCase().includes(search.toLowerCase())
     );
   }

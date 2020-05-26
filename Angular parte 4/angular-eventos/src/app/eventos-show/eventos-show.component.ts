@@ -9,13 +9,15 @@ import { EventosService } from '../services/eventos.service';
   styleUrls: ['./eventos-show.component.css']
 })
 export class EventosShowComponent implements OnInit {
-  eventos: Evento[];
+  eventos: Evento[] = [];
   search = '';
 
   constructor(private eventosService: EventosService) { }
 
   ngOnInit(): void {
-    this.eventos = this.eventosService.getEventos();
+    this.eventosService.getEventos().subscribe(
+      eventos => this.eventos = eventos
+    );
   }
 
   orderDate() {

@@ -15,7 +15,7 @@
   </form>
 </nav>
 
-<div class="card-columns" *ngIf="eventos && eventos.length; else noEventos">
+<div class="card-columns" *ngIf="eventos.length; else noEventos">
   <evento-item class="card" *ngFor="let evento of eventos | eventosFilter:search"
     [evento]="evento" (deleted)="deleteEvento(evento)">
   </evento-item>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Evento } from '../interfaces/evento';
+import { EventosService } from '../services/eventos.service';
 
 @Component({
   selector: 'evento-add',
@@ -11,20 +12,24 @@ export class EventoAddComponent implements OnInit {
   nombreArchivo: string;
   @Output() add = new EventEmitter<Evento>();
 
-  constructor() { }
+  constructor(private eventosService: EventosService) { }
 
   ngOnInit(): void {
     this.resetFormulario();
   }
 
   addEvento() {
-    this.add.emit(this.newEvento);
-    this.resetFormulario();
+    this.eventosService.addEvento(this.newEvento).subscribe(
+      evento => {
+        this.add.emit(evento);
+        this.resetFormulario();
+      }
+    );
   }
 
-  private resetFormulario() {
+  resetFormulario() {
     this.newEvento = {
-      title: '',
+      name: '',
       description: '',
       image: '',
       price: 0,
