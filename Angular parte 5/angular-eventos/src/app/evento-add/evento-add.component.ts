@@ -12,6 +12,7 @@ export class EventoAddComponent implements OnInit {
   newEvento: Evento;
   nombreArchivo: string;
   @Output() add = new EventEmitter<Evento>();
+  saved = false;
 
   constructor(private eventosService: EventosService, private router: Router) { }
 
@@ -21,7 +22,10 @@ export class EventoAddComponent implements OnInit {
 
   addEvento() {
     this.eventosService.addEvento(this.newEvento).subscribe(
-      evento => this.router.navigate(['/eventos'])
+      evento => {
+        this.saved = true;
+        this.router.navigate(['/eventos']);
+      }
     );
   }
 

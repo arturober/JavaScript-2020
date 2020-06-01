@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { EventosService } from '../services/eventos.service';
 import { Evento } from '../interfaces/evento';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'evento-detail',
@@ -18,10 +19,7 @@ export class EventoDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.params.id;
-    this.eventosService.getEvento(id).subscribe(
-      evento => this.evento = evento
-    );
+    this.evento = this.route.snapshot.data.evento;
   }
 
 
