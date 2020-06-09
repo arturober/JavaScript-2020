@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../auth/services/auth.service';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -19,7 +19,7 @@ export class LoginActivateGuard implements CanActivate {
       return this.authService.isLogged().pipe(
         map(ok => {
           if (!ok) {
-            return this.router.createUrlTree(['/login']);
+            return this.router.createUrlTree(['/auth', 'login']);
           }
           return true;
         })

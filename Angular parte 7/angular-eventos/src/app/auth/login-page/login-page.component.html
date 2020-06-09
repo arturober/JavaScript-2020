@@ -7,6 +7,6 @@
     <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="password">
   </div>
   <p class="text-danger" *ngIf="error">{{error}}</p>
-  <a class="btn btn-secondary" [routerLink]="['/register']" role="button">Crear cuenta</a>
+  <a class="btn btn-secondary" [routerLink]="['/auth', 'register']" role="button">Crear cuenta</a>
   <button type="submit" class="btn btn-primary ml-4">Login</button>
 </form>

@@ -40,7 +40,7 @@ export class RegisterPageComponent implements OnInit {
 
   registrarse() {
     this.authService.register(this.user).subscribe(
-      () => this.router.navigate(['/login']),
+      () => this.router.navigate(['/auth', 'login']),
       error => console.error(error)
     );
   }

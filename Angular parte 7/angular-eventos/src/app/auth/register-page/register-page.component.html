@@ -52,6 +52,6 @@
   <div>
     <img [src]="user.avatar" class="img-thumbnail">
   </div>
-  <a class="btn btn-secondary" [routerLink]="['/login']" role="button">Cancelar</a>
+  <a class="btn btn-secondary" [routerLink]="['/auth', 'login']" role="button">Cancelar</a>
   <button type="submit" class="btn btn-primary ml-4" [disabled]="formRegistro.invalid">Registrarse</button>
 </form>

@@ -1,4 +1,4 @@
-import { User } from './user';
+import { User } from '../../auth/interfaces/user';
 
 export interface Evento {
   id?: number;

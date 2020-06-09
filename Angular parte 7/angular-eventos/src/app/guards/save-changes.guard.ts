@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { EventoAddComponent } from '../evento-add/evento-add.component';
+import { EventoAddComponent } from '../eventos/evento-add/evento-add.component';
 
 @Injectable({
   providedIn: 'root'

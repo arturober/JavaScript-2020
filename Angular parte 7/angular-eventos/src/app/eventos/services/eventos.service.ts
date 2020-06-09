@@ -3,8 +3,8 @@ import { Evento } from '../interfaces/evento';
 import { Observable } from 'rxjs';
 import { map, delay } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { EventosResponse, EventoResponse } from '../interfaces/responses';
 import { environment } from 'src/environments/environment';
+import { EventosResponse, EventoResponse } from '../interfaces/responses';
 
 @Injectable({
   providedIn: 'root'
